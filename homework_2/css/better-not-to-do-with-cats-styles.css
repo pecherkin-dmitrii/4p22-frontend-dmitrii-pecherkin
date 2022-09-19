@@ -1,0 +1,14 @@
+table {
+    border: 1px solid grey;
+    border-collapse: collapse;
+    text-align: center;
+    vertical-align: middle;
+}
+
+th {
+    border: 2px solid grey;
+}
+
+td {
+    border: 1px solid grey;
+}

@@ -1,0 +1,19 @@
+html {
+    background-image: url("../assets/img/gray-kitty-with-monochrome-wall-behind-her.jpg");
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+
+.logo {
+    width: 3%;
+    height: 3%;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #ffdb67;
+    text-align: center;
+}
