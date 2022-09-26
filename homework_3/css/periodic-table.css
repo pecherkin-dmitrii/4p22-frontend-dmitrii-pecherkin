@@ -1,0 +1,27 @@
+table {
+    border: 1px solid grey;
+    border-collapse: collapse;
+    vertical-align: middle;
+}
+
+th {
+    border: 2px solid grey;
+    text-align: center;
+}
+
+td {
+    width: 100px;
+    border: 1px solid grey;
+    text-align: left;
+}
+
+.pink {
+    background-color: #ff8d6c;
+}
+.yellow {
+    background-color: #ffe311;
+}
+
+.blue {
+    background-color: #4ed8ff;
+}
