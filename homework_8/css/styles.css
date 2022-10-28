@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.calculator {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+.calculator__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+}
+
+.calcutator__button {
+    width: 100px;
+}
