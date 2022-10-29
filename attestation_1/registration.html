@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Регистрация</title>
+        <link rel="stylesheet" href="./css/styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Roboto:wght@400;700&display=swap"
+              rel="stylesheet">
+    </head>
+    <body class="body">
+        <header class="heading">
+            <div class="heading__title-container">
+                <img class="heading__logo" src="./assets/img/1280px-IU_logo_1.png" alt="Логотип Иннополиса">
+                <span class="heading__title">PCS Frontend</span>
+            </div>
+            <nav class="heading__nav">
+                <a class="heading__link heading__link_active-page" href="./registration.html">Регистрация</a>
+                <a class="heading__link" href="./login.html">Вход</a>
+            </nav>
+        </header>
+        <main>
+            <form class="login-form" action="">
+                <h1 class="login-form__heading">Регистрация</h1>
+                <label class="login-form__label-text-field" for="email">Email</label>
+                <input class="login-form__input-text" id="email" type="email" name="email" placeholder="Введите email">
+                <label class="login-form__label-text-field" for="password">Пароль</label>
+                <input class="login-form__input-text" id="password" type="password" name="password"
+                       placeholder="Введите пароль">
+                <label class="login-form__label-text-field" for="password-repeat">Подтверждение пароля</label>
+                <input class="login-form__input-text" id="password-repeat" type="password" name="password-repeat"
+                       placeholder="Подтвердите пароль">
+                <p class="login-form__label-text-field">Пол</p>
+                <label class="login-form__label-radio" for="gender-male">
+                    <input class="login-form__input-radio" type="radio" name="gender" id="gender-male" value="male"
+                           checked>
+                    <span class="login-form__custom-radio"></span>
+                    Мужчина
+                </label>
+                <label class="login-form__label-radio login-form__label-radio_without-bottom-margin"
+                       for="gender-female">
+                    <input class="login-form__input-radio" type="radio" name="gender" id="gender-female"
+                           value="female">
+                    <span class="login-form__custom-radio"></span>
+                    Женщина
+                </label>
+                <label class="login-form__label-text-field" for="about">О себе</label>
+                <textarea class="login-form__textarea" name="about" id="about" cols="30" rows="16"
+                          placeholder="Расскажите о себе..."></textarea>
+                <label class="login-form__label-checkbox" for="checkbox-updates">
+                    <input class="login-form__input-checkbox" id="checkbox-updates" type="checkbox"
+                           name="updates" value="true">
+                    <span class="login-form__custom-checkbox"></span>
+                    Я согласен получать обновления на почту
+                </label>
+                <button class="login-form__submit-button" type="submit">Регистрация</button>
+            </form>
+        </main>
+    </body>
+</html>

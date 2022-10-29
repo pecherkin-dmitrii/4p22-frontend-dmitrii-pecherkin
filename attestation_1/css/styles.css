@@ -1,0 +1,381 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    margin-right: calc(-1 * (100vw - 100%));
+}
+
+body {
+    margin: 0;
+    background-color: #FFFFFF;
+}
+
+.heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 4px 0 #00000040;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+}
+
+.heading__title-container {
+    display: flex;
+    align-items: center;
+}
+
+.heading__title {
+    font-family: "Inter", sans-serif;
+    color: #787878;
+}
+
+.heading__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.heading__link {
+    font-family: "Inter", sans-serif;
+    text-decoration: none;
+    color: #787878;
+}
+
+.heading__link:hover {
+    color: #e17915;
+}
+
+.heading__link_active-page {
+    color: #1A226B;
+    pointer-events: none;
+    cursor: default;
+}
+
+.heading__link_active-page:hover {
+    color: #1A226B;
+}
+
+.login-form {
+    background-color: #FFFFFF;
+    color: #787878;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 40px 10px #00000040;
+    font-weight: 700;
+    font-family: "Roboto", sans-serif;
+}
+
+.login-form__heading {
+    text-align: center;
+    margin: 0;
+}
+
+.login-form__label-checkbox {
+    font-weight: 400;
+
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    height: 20px;
+    padding-left: 30px;
+}
+
+.login-form__input-checkbox {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.login-form__custom-checkbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-color: #FFFFFF;
+    border: 2px solid #787878;
+    transition: .3s background-color;
+}
+
+.login-form__custom-checkbox:after {
+    content: "";
+    position: absolute;
+    display: none;
+
+    width: 12px;
+    height: 12px;
+    left: 2px;
+    top: 2px;
+    background-color: #787878;
+}
+
+.login-form__input-checkbox:checked ~ .login-form__custom-checkbox:after {
+    display:block;
+}
+
+.login-form__label-checkbox:hover span {
+    background-color: #ccc;
+}
+
+.login-form__input-text {
+    border: 2px solid #787878;
+    outline: none;
+    font-family: inherit;
+    font-weight: inherit;
+    color: inherit;
+}
+
+.login-form__input-text::placeholder {
+    color: #CCCCCC;
+}
+
+.login-form__label-radio {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+
+    font-size: 14px;
+    line-height: 16px;
+    padding-left: 30px;
+    margin-bottom: 9px;
+    height: 20px;
+}
+
+.login-form__label-radio_without-bottom-margin {
+    margin-bottom: 0;
+}
+
+.login-form__input-radio {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.login-form__custom-radio {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    border: 2px solid #787878;
+    height: 20px;
+    width: 20px;
+    transition: .3s background-color;
+}
+
+.login-form__label-radio:hover .login-form__custom-radio {
+    background-color: #ccc;
+}
+
+.login-form__custom-radio::after {
+    content: "";
+    position: absolute;
+    display: none;
+    border-radius: 50%;
+    background-color: #787878;
+    width: 12px;
+    height: 12px;
+    top: 2px;
+    left: 2px;
+}
+
+.login-form__input-radio:checked ~ .login-form__custom-radio::after {
+    display: block;
+}
+
+.login-form__textarea {
+    border: 2px solid #787878;
+    outline: none;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    color: #787878;
+}
+
+.login-form__textarea::placeholder {
+    color: #CCCCCC;
+}
+
+.login-form__submit-button {
+    appearance:none;
+    -webkit-appearance:none;
+
+    border: none;
+    background-color: #1A226B;
+    color: #FFFFFF;
+    font-weight: inherit;
+}
+
+.login-form__submit-button:hover {
+    background-color: #e17915;
+    color: #1A226B;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .heading {
+        height: calc(80 / 768 * 100vw);
+        padding-left: calc(20 / 768 * 100vw);
+        padding-right: calc(28 / 768 * 100vw);
+    }
+
+    .heading__logo {
+        width: calc(124 / 768 * 100vw);
+        height: calc(25 / 768 * 100vw);
+    }
+
+    .heading__title {
+        margin-left: calc(34 / 768 * 100vw);
+        font-size: calc(24 / 768 * 100vw);
+        line-height: calc(29.05 / 768 * 100vw);
+    }
+
+    .heading__nav {
+        column-gap: calc(36 / 768 * 100vw);
+    }
+
+    .heading__link {
+        font-size: calc(16 / 768 * 100vw);
+        line-height: calc(19.36 / 768 * 100vw);
+    }
+
+    .login-form {
+        width: calc(600 / 768 * 100vw);
+        margin: calc(80 / 768 * 100vw) auto auto auto;
+        padding: calc(26 / 768 * 100vw) calc(45 / 768 * 100vw);
+    }
+
+    .login-form__heading {
+        font-size: calc(50 / 768 * 100vw);
+        line-height: calc(50 / 768 * 100vw);
+    }
+
+    .login-form__label-text-field {
+        font-size: calc(16 / 768 * 100vw);
+        line-height: calc(16 / 768 * 100vw);
+        margin-top: calc(11 / 768 * 100vw);
+        margin-bottom: calc(3 / 768 * 100vw);
+    }
+
+    .login-form__label-checkbox {
+        margin-top: calc(24 / 768 * 100vw);
+        font-size: calc(14 / 768 * 100vw);
+        line-height: calc(16 / 768 * 100vw);
+    }
+
+    .login-form__input-text {
+        padding: calc(6 / 768 * 100vw) calc(15 / 768 * 100vw);
+        height: calc(49 / 768 * 100vw);
+        font-size: calc(28 / 768 * 100vw);
+        line-height: calc(36 / 768 * 100vw);
+    }
+
+    .login-form__label-radio {
+        font-size: calc(14 / 768 * 100vw);
+        line-height: calc(16 / 768 * 100vw);
+    }
+
+    .login-form__textarea {
+        padding: calc(6 / 768 * 100vw) calc(15 / 768 * 100vw);
+        font-size: calc(28 / 768 * 100vw);
+        line-height: calc(36 / 768 * 100vw);
+    }
+
+    .login-form__submit-button {
+        margin: calc(62 / 768 * 100vw) auto calc(4 / 768 * 100vw) auto;
+        padding: calc(18 / 768 * 100vw) calc(17 / 768 * 100vw);
+        font-size: calc(24 / 768 * 100vw);
+        line-height: calc(16 / 768 * 100vw);
+        width: calc(180 / 768 * 100vw);
+        height: calc(52 / 768 * 100vw);
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .heading {
+        height: calc(80 / 1440 * 100vw);
+        padding-left: calc(30 / 1440 * 100vw);
+        padding-right: calc(43 / 1440 * 100vw);
+    }
+
+    .heading__logo {
+        width: calc(222 / 1440 * 100vw);
+        height: calc(50 / 1440 * 100vw);
+    }
+
+    .heading__title {
+        margin-left: calc(30 / 1440 * 100vw);
+        font-size: calc(36 / 1440 * 100vw);
+        line-height: calc(43.57 / 1440 * 100vw);
+    }
+
+    .heading__nav {
+        column-gap: calc(28 / 768 * 100vw);
+    }
+
+    .heading__link {
+        font-size: calc(24 / 1440 * 100vw);
+        line-height: calc(29.05 / 1440 * 100vw);
+    }
+
+    .login-form {
+        width: calc(600 / 1440 * 100vw);
+        margin: calc(125 / 1440 * 100vw) auto auto auto;
+        padding: calc(26 / 1440 * 100vw) calc(45 / 1440 * 100vw) calc(37 / 1440 * 100vw);
+    }
+
+    .login-form__heading {
+        font-size: calc(50 / 1440 * 100vw);
+        line-height: calc(50 / 1440 * 100vw);
+    }
+
+    .login-form__label-text-field {
+        font-size: calc(16 / 1440 * 100vw);
+        line-height: calc(16 / 1440 * 100vw);
+        margin-top: calc(13 / 1440 * 100vw);
+        margin-bottom: calc(3 / 1440 * 100vw);
+    }
+
+    .login-form__label-checkbox {
+        margin-top: calc(24 / 1440 * 100vw);
+        font-size: calc(14 / 1440 * 100vw);
+        line-height: calc(16 / 1440 * 100vw);
+    }
+
+    .login-form__input-text {
+        padding: calc(6 / 1440 * 100vw) calc(15 / 1440 * 100vw);
+        height: calc(49 / 1440 * 100vw);
+        font-size: calc(28 / 1440 * 100vw);
+        line-height: calc(36 / 1440 * 100vw);
+    }
+
+    .login-form__label-radio {
+        font-size: calc(14 / 1440 * 100vw);
+        line-height: calc(16 / 1440 * 100vw);
+    }
+
+    .login-form__textarea {
+        padding: calc(6 / 1440 * 100vw) calc(15 / 1440 * 100vw);
+        font-size: calc(28 / 1440 * 100vw);
+        line-height: calc(36 / 1440 * 100vw);
+    }
+
+    .login-form__submit-button {
+        margin: calc(52 / 1440 * 100vw) auto calc(4 / 1440 * 100vw) auto;
+        padding: calc(18 / 1440 * 100vw) calc(17 / 1440 * 100vw);
+        font-size: calc(24 / 1440 * 100vw);
+        line-height: calc(16 / 1440 * 100vw);
+        width: calc(180 / 1440 * 100vw);
+        height: calc(52 / 1440 * 100vw);
+    }
+}
