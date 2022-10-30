@@ -1,16 +1,16 @@
 "use strict"
 
+const FIRST_NUMBER_REQUIRED_ERROR_TEXT = "Первое число не указано";
+const SECOND_NUMBER_REQUIRED_ERROR_TEXT = "Второе число не указано";
+const WRONG_NUMBERS_ERROR_TEXT = "Некорректный ввод чисел";
+const OPERATION_REQUIRED_ERROR_TEXT = "Не введён знак";
+const WRONG_OPERATION_ERROR_TEXT = "Программа не поддерживает такую операцию";
+const INCORRECT_OPERATION_ERROR_TEXT = "Операция некорректна";
+
 const firstNumberInput = document.getElementById("first-number");
 const secondNumberInput = document.getElementById("second-number");
 const operationInput = document.getElementById("operation");
 const calculatorButton = document.querySelector(".calcutator__button");
-
-const firstNumberRequiredErrorText = "Первое число не указано";
-const secondNumberRequiredErrorText = "Второе число не указано";
-const wrongNumbersErrorText = "Некорректный ввод чисел";
-const operationRequiredErrorText = "Не введён знак";
-const wrongOperationErrorText = "Программа не поддерживает такую операцию";
-const incorrectOperationErrorText = "Операция некорректна";
 
 function calculate(event) {
     event.preventDefault();
@@ -47,10 +47,10 @@ function isValidNumber(rawNumberValue, numberOrder) {
     const rawValueTrimmed = rawNumberValue.trim();
 
     if (rawValueTrimmed === "") {
-        alert(numberOrder === 1 ? firstNumberRequiredErrorText : secondNumberRequiredErrorText);
+        alert(numberOrder === 1 ? FIRST_NUMBER_REQUIRED_ERROR_TEXT : SECOND_NUMBER_REQUIRED_ERROR_TEXT);
         return false;
     } else if (isNaN(rawValueTrimmed)) {
-        alert(wrongNumbersErrorText);
+        alert(WRONG_NUMBERS_ERROR_TEXT);
         return false;
     } else {
         return true;
@@ -61,11 +61,11 @@ function isValidOperation(rawOperation) {
     const rawOperationTrimmed = rawOperation.trim();
 
     if (rawOperationTrimmed === "") {
-        alert(operationRequiredErrorText);
+        alert(OPERATION_REQUIRED_ERROR_TEXT);
         return false;
     } else if (rawOperationTrimmed !== "+" && rawOperationTrimmed !== "-" &&
         rawOperationTrimmed !== "*" && rawOperationTrimmed !== "/") {
-        alert(wrongOperationErrorText);
+        alert(WRONG_OPERATION_ERROR_TEXT);
         return false;
     } else {
         return true;
@@ -77,7 +77,7 @@ function displayResult(result) {
         console.log(result);
         alert("Результат: " + result);
     } else {
-        alert(incorrectOperationErrorText);
+        alert(INCORRECT_OPERATION_ERROR_TEXT);
     }
 }
 
